@@ -27,13 +27,13 @@ sourceSets {
     main {
         java {
             srcDirs = ['src']
-            include('**/Puzzle1.java')
+            include('**/Puzzle1.java', '**/Puzzle2*.java')
         }
     }
     test {
         java {
             srcDirs = ['test']
-            include('**/Puzzle1Test.java')
+            include('**/Puzzle1Test.java', '**/Puzzle2Test.java')
         }
     }
 }
