@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    compile 'org.antlr:antlr4-runtime:4.7.1'
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.1.0'
     testCompile 'org.junit.jupiter:junit-jupiter-params:5.1.0'
     testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
@@ -26,14 +27,12 @@ dependencies {
 sourceSets {
     main {
         java {
-            srcDirs = ['src']
-            include('**/Puzzle1.java', '**/Puzzle2*.java', '**/Puzzle3*.java')
+            srcDirs = ['src', 'gen']
         }
     }
     test {
         java {
             srcDirs = ['test']
-            include('**/Puzzle1Test.java', '**/Puzzle2Test.java', '**/Puzzle3Test.java')
         }
     }
 }
