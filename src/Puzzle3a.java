@@ -11,7 +11,7 @@ public class Puzzle3a {
 
     protected static void solve(int x, Consumer<SpiralCoord> block) {
         Stream<SpiralCoord> coordStream = Stream.iterate(new SpiralCoord(0, 0, 1, SpiralCoord.Sector.ORIGIN, null), SpiralCoord::next);
-        coordStream.takeWhile(sc -> sc.Value <= x).peek(System.out::println).reduce((a, b) -> b).ifPresent(block);
+        coordStream.takeWhile(sc -> sc.Value <= x).reduce((a, b) -> b).ifPresent(block);
     }
 
     protected static class SpiralCoord {
