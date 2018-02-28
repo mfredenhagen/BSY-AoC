@@ -1,7 +1,8 @@
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import static java.util.Arrays.stream;
 
 public class Puzzle2a {
 
@@ -10,9 +11,9 @@ public class Puzzle2a {
     }
 
     protected static int solve(String[] args) {
-        return java.util.Arrays.stream(args, 0, args.length).mapToInt(s -> {
+        return stream(args, 0, args.length).mapToInt(s -> {
             String[] split = s.split(",");
-            Stream<Integer> integerStream = Arrays.stream(split).map(Integer::parseInt);
+            Stream<Integer> integerStream = stream(split).map(Integer::parseInt);
             List<Integer> collect = integerStream.sorted().collect(Collectors.toList());
             for(int i = 0; i < collect.size(); i++) {
                 for(int j = collect.size() - 1; j > i; j--) {

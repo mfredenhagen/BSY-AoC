@@ -1,5 +1,7 @@
 import java.util.function.Function;
 
+import static java.util.Arrays.stream;
+
 public class Puzzle4 {
     public static void main(String[] args) {
         System.out.println(solve(args));
@@ -15,9 +17,9 @@ public class Puzzle4 {
     }
 
     private static long streamArgs(String[] args, Function<String, String> mapper) {
-        return java.util.Arrays.stream(args, 0, args.length).filter(str -> {
+        return stream(args).filter(str -> {
             String[] split = str.split(" ");
-            return java.util.Arrays.stream(split, 0, split.length)
+            return stream(split)
                     .map(mapper)
                     .distinct().count() == split.length;
         }).count();
