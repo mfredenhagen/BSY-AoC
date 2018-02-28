@@ -15,12 +15,12 @@ public class Puzzle5 {
         return calc(args, i -> i + (i >= 3 ? -1 : 1));
     }
 
-    private static int calc(String[] args, Function<Integer, Integer> block) {
+    private static int calc(String[] args, Function<Integer, Integer> rule) {
         int[] jumps = Arrays.stream(args).mapToInt(Integer::parseInt).toArray();
         int current = 0, hops = 0;
         while (current < jumps.length) {
             int dist = jumps[current];
-            jumps[current] = block.apply(dist);
+            jumps[current] = rule.apply(dist);
             current += dist;
             hops++;
         }
