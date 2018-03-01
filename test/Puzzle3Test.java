@@ -22,7 +22,7 @@ class Puzzle3Test {
 
     @Test
     void spike2() {
-        Puzzle3a.solve(312051, (Puzzle3a.SpiralCoord c) -> {
+        Puzzle3.solveA(312051, (Puzzle3.SpiralCoord c) -> {
             System.out.println(c.next().Value);
             assertEquals(312453, c.next().Value);
         });
@@ -30,6 +30,6 @@ class Puzzle3Test {
 
     @Test
     void solveA() {
-        Puzzle3a.solve(747, (Puzzle3a.SpiralCoord c) -> assertEquals(806, c.next().Value));
+        Puzzle3.solveA(747, (Puzzle3.SpiralCoord c) -> assertEquals(806, c.next().Value));
     }
 }
