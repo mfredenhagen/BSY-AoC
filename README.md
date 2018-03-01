@@ -1,6 +1,6 @@
 # BSY-AoC
 
-Dies ist eine [Bluesky IT Solutions AG](https://wwww.bluesky-it.ch) Coding Challenge, basierend auf den Aufgaben 
+Dies ist eine [Bluesky IT Solutions AG](https://www.bluesky-it.ch) Coding Challenge, basierend auf den Aufgaben 
 von [AdventOfCode](https://adventofcode.com/2017). 
 Hauptsächliche nutze ich diese Aufgaben um Java-Streams, JUnit5 und Gradle zu praktizieren.
 
