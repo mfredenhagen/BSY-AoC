@@ -24,12 +24,12 @@ class Puzzle2Test {
         String[] args = new String[] {"5,9,2,8",
                                       "9,4,7,3",
                                       "3,8,6,5"};
-        assertEquals(9, Puzzle2a.solve(args));
+        assertEquals(9, Puzzle2.solveA(args));
     }
 
     @Test
     void spike2() {
-        int result = Puzzle2a.solve(ARGS);
+        int result = Puzzle2.solveA(ARGS);
         System.out.println(result);
         assertEquals(191, result);
     }
