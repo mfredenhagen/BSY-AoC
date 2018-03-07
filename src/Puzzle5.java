@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.function.Function;
 
 public class Puzzle5 {
+
     public static void main(String[] args) {
         System.out.println("" + solve(args));
         System.out.println("" + solveA(args));

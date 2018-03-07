@@ -15,7 +15,7 @@ class Puzzle3Test {
     @Test
     void spike() {
         Puzzle3.solve(312051, (Puzzle3.SpiralCoord c) -> {
-            System.out.println(c.distance());
+            System.out.println("Puzzle3: " + c.distance());
             assertEquals(430, c.distance());
         });
     }
@@ -23,7 +23,7 @@ class Puzzle3Test {
     @Test
     void spike2() {
         Puzzle3.solveA(312051, (Puzzle3.SpiralCoord c) -> {
-            System.out.println(c.next().Value);
+            System.out.println("Puzzle3a: " + c.next().Value);
             assertEquals(312453, c.next().Value);
         });
     }

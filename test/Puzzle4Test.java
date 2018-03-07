@@ -528,7 +528,7 @@ class Puzzle4Test {
     @Test
     void spike() {
         long result = Puzzle4.solve(INPUT.split("\n"));
-        System.out.println(result);
+        System.out.println("Puzzle4: " + result);
         assertEquals(477L, result);
     }
 
@@ -542,7 +542,7 @@ class Puzzle4Test {
     @Test
     void spikeA() {
         long result = Puzzle4.solveA(INPUT.split("\n"));
-        System.out.println(result);
+        System.out.println("Puzzle4 a: " + result);
         assertEquals(167L, result);
     }
 }

@@ -20,14 +20,14 @@ class Puzzle5Test {
     @Test
     void spike() {
         int result = Puzzle5.solve(INPUT);
-        System.out.println(result);
+        System.out.println("Puzzle5: " + result);
         assertEquals(351282, result);
     }
 
     @Test
     void spikeA() {
         int result = Puzzle5.solveA(INPUT);
-        System.out.println(result);
+        System.out.println("Puzzle5 a: " + result);
         assertEquals(24568703, result);
     }
 }
