@@ -6,7 +6,9 @@ Hauptsächliche nutze ich diese Aufgaben um Java-Streams, JUnit5 und Gradle zu p
 
 How to use: `./gradlew build`
 
+Aufgaben sind als Test mit Ausgabe des Ergebnis auf der Console implementiert. 
+
 Derzeitiger Stand: 
-* Tag 1-5 gelöst und hier eingecheckt, 
-* Tag 5-11 Lösung vorbereitet, refactoring ausstehend
+* Tag 1-6 gelöst und hier eingecheckt, 
+* Tag 6-11 Lösung vorbereitet, refactoring ausstehend
 * Tag 12 in Lösungsfindung 

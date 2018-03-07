@@ -28,8 +28,6 @@ public class Puzzle6 {
             Stream.iterate(max.getSuccessor(), Bank::getSuccessor).limit(max.clear()).forEach(Bank::store);
             String combination = calcCombination(banks);
             if (combinations.contains(combination)) {
-                System.out.println(combination);
-                System.out.println("@" + combinations.indexOf(combination));
                 break;
             }
             combinations.add(combination);
