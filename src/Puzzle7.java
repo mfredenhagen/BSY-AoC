@@ -17,6 +17,7 @@ public class Puzzle7 {
     }
 
     public static Puzzle7Result solve(String[] args) {
+        ProgCollection.INSTANCE.clear(); // static state is evil! -> better use member method
         String input = Arrays.stream(args, 0, args.length).collect(Collectors.joining("\n"));
         Puzzle7Lexer lexer = new Puzzle7Lexer(CharStreams.fromString(input + "\n"));
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -62,6 +63,10 @@ public class Puzzle7 {
 
         Collection<Prog> getAllProgs() {
             return progs.values();
+        }
+
+        void clear() {
+            progs.clear();
         }
     }
 
