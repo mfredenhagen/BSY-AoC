@@ -9,6 +9,6 @@ How to use: `./gradlew build`
 Aufgaben sind als Test mit Ausgabe des Ergebnis auf der Console implementiert. 
 
 Derzeitiger Stand: 
-* Tag 1-9 gelöst und hier eingecheckt, 
-* Tag 9-11 Lösung vorbereitet, refactoring ausstehend
+* Tag 1-10 gelöst und hier eingecheckt, 
+* Tag 11 Lösung vorbereitet, refactoring ausstehend
 * Tag 12 in Lösungsfindung 
