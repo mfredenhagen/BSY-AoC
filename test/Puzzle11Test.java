@@ -16,6 +16,15 @@ class Puzzle11Test {
 
     @Test
     void spike() {
-        Puzzle11.main(new String[]{INPUT});
+        int result = Puzzle11.solve(INPUT);
+        System.out.println("Puzzle11: " + result);
+        assertEquals(764, result);
+    }
+
+    @Test
+    void spikeA() {
+        int result = Puzzle11.solveA(INPUT);
+        System.out.println("Puzzle11 a: " + result);
+        assertEquals(1532, result);
     }
 }
