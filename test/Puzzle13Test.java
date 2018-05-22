@@ -1,7 +1,5 @@
 import org.junit.jupiter.api.Test;
 
-import java.util.stream.IntStream;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class Puzzle13Test {
@@ -22,55 +20,31 @@ class Puzzle13Test {
 
     @Test
     void testLayerOfRange2MovesUpAndDown() {
-        Puzzle13.RangeLayer layer = new Puzzle13.RangeLayer(2, 0);
-        assertTrue(layer.isAtTop());
-        layer.step();
-        assertFalse(layer.isAtTop());
-        layer.step();
-        assertTrue(layer.isAtTop());
+        Puzzle13.Layer layer = new Puzzle13.Layer(2, 0);
+        assertTrue(layer.isAtTop(0));
+        assertFalse(layer.isAtTop(1));
+        assertTrue(layer.isAtTop(2));
     }
 
     @Test
     void testLayerOfRange3MovesUpAndDown() {
-        Puzzle13.RangeLayer layer = new Puzzle13.RangeLayer(3, 0);
-        assertTrue(layer.isAtTop());
+        Puzzle13.Layer layer = new Puzzle13.Layer(3, 0);
+        assertTrue(layer.isAtTop(0));
         for (int i = 0; i < 3; i++) {
-            layer.step();
-            assertFalse(layer.isAtTop());
+            assertFalse(layer.isAtTop(i + 1));
         }
-        layer.step();
         // second up and down
-        assertTrue(layer.isAtTop());
+        assertTrue(layer.isAtTop(4));
         for (int i = 0; i < 3; i++) {
-            layer.step();
-            assertFalse(layer.isAtTop());
+            assertFalse(layer.isAtTop(i + 5));
         }
-        layer.step();
-        assertTrue(layer.isAtTop());
+        assertTrue(layer.isAtTop(8));
     }
-
-    @Test
-    void testFirewallStepsLayer() {
-        Puzzle13.Firewall firewall = Puzzle13.Firewall.buildFirewall(TEST_DATA);
-        // initial
-        firewall.getRangeLayers().forEach(layer -> assertTrue(layer.isAtTop()));
-        // picosecond 1
-        firewall.step();
-        firewall.getRangeLayers().forEach(layer -> assertFalse(layer.isAtTop()));
-        // picosecond 2
-        firewall.step();
-        firewall.getRangeLayers().filter(l -> l.getDepth() != 1).forEach(l -> assertFalse(l.isAtTop()));
-        assertTrue(firewall.getRangeLayers().anyMatch(l -> l.getDepth() == 1 && l.isAtTop()));
-        // picosecond
-        firewall.step();
-        firewall.getRangeLayers().forEach(layer -> assertFalse(layer.isAtTop()));
-    }
-
 
     @Test
     void testCalculateSeverity() {
         Puzzle13.Firewall firewall = Puzzle13.Firewall.buildFirewall(TEST_DATA);
-        assertEquals(24, firewall.caught().sum());
+        assertEquals(24, firewall.caught(0).sum());
     }
 
     @Test
@@ -81,30 +55,6 @@ class Puzzle13Test {
     }
 
     @Test
-    void test10PicoSecondsDoesntGetCaught() {
-        Puzzle13.Firewall firewall = Puzzle13.Firewall.buildFirewall(TEST_DATA);
-        IntStream.range(0, 10).forEach(i -> firewall.step());
-        assertEquals(0, firewall.caught().count());
-
-    }
-
-    @Test
-    void first1000Picos() {
-        IntStream.range(0, 100000).forEach(i -> {
-                    Puzzle13.Firewall firewall = Puzzle13.Firewall.buildFirewall(INPUT_DATA);
-                    IntStream.range(0, i).forEach(j -> firewall.step());
-                    long count = firewall.caught().count();
-
-                    if (count == 0) {
-                        System.out.println(count);
-                    }
-                }
-        );
-
-    }
-
-
-    @Test
     void solveA() {
         assertEquals(10, Puzzle13.solveA(TEST_DATA));
     }
@@ -113,6 +63,6 @@ class Puzzle13Test {
     void spikeA() {
         int result = Puzzle13.solveA(INPUT_DATA);
         System.out.println("Puzzle13 a: " + result);
-        //assertEquals(1704, result);
+        assertEquals(3970918, result);
     }
 }
