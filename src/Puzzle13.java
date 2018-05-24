@@ -5,14 +5,14 @@ import java.util.stream.IntStream;
 public class Puzzle13 {
 
     public static void main(String[] args) {
-        System.out.println("Firewall-Severity for picosecond 0:" + solve(args));
+        System.out.println("Firewall-Severity for picosecond 0:" + solve(args) + " and pass through at " + solveA(args));
     }
 
-    public static int solve(String[] args) {
+    protected static int solve(String[] args) {
         return Puzzle13.Firewall.buildFirewall(args).caught(0).sum();
     }
 
-    public static int solveA(String[] args) {
+    protected static int solveA(String[] args) {
         return Puzzle13.Firewall.buildFirewall(args).passThrough();
     }
 
