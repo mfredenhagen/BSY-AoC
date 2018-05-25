@@ -32,6 +32,10 @@ sourceSets {
         }
         resources {
             srcDirs = ['src']
+            exclude '*.g4'
+            tasks.withType(Copy) {
+                includeEmptyDirs = false
+            }
         }
     }
     test {
