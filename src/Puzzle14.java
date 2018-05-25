@@ -65,7 +65,6 @@ public class Puzzle14 {
     private static IntStream getBinaryGrid(String key) {
         return IntStream.range(0, 128).mapToObj(i -> Puzzle10.solveA(new String[]{key + "-" + i}, 256))
                 .map(Puzzle14::toBinary)
-                .peek(System.out::println)
                 .flatMapToInt(String::chars);
     }
 

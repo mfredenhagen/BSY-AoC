@@ -37,10 +37,10 @@ class Puzzle14Test {
 
     @Test
     void adjacentIndexes() {
-        assertTrue(Arrays.equals(new int[]{}, Puzzle14.adjacentIndexes(0, 128).toArray()));
-        assertTrue(Arrays.equals(new int[]{126}, Puzzle14.adjacentIndexes(127, 128).toArray()));
-        assertTrue(Arrays.equals(new int[]{2, 129}, Puzzle14.adjacentIndexes(130, 128).toArray()));
-        assertTrue(Arrays.equals(new int[]{126 * 128}, Puzzle14.adjacentIndexes(128 * 127, 128).toArray()));
+        assertTrue(Arrays.equals(new int[]{1, 128}, Puzzle14.adjacentIndexes(0, 128).toArray()));
+        assertTrue(Arrays.equals(new int[]{126, 128 + 127}, Puzzle14.adjacentIndexes(127, 128).toArray()));
+        assertTrue(Arrays.equals(new int[]{2, 129, 131, 128 + 130}, Puzzle14.adjacentIndexes(130, 128).toArray()));
+        assertTrue(Arrays.equals(new int[]{126 * 128, 128 * 127 + 1}, Puzzle14.adjacentIndexes(128 * 127, 128).toArray()));
         assertTrue(Arrays.equals(new int[]{127 * 128 - 1, 128 * 128 - 2}, Puzzle14.adjacentIndexes(128 * 128 - 1, 128).toArray()));
     }
 }
