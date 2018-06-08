@@ -1,5 +1,4 @@
 // Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle16.g4 by ANTLR 4.7
-
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -7,7 +6,7 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  * by {@link Puzzle16Parser}.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
- *            operations with no return type.
+ * operations with no return type.
  */
 public interface Puzzle16Visitor<T> extends ParseTreeVisitor<T> {
     /**
@@ -49,30 +48,6 @@ public interface Puzzle16Visitor<T> extends ParseTreeVisitor<T> {
      * @return the visitor result
      */
     T visitPartner(Puzzle16Parser.PartnerContext ctx);
-
-    /**
-     * Visit a parse tree produced by {@link Puzzle16Parser#intparams}.
-     *
-     * @param ctx the parse tree
-     * @return the visitor result
-     */
-    T visitIntparams(Puzzle16Parser.IntparamsContext ctx);
-
-    /**
-     * Visit a parse tree produced by {@link Puzzle16Parser#nameparams}.
-     *
-     * @param ctx the parse tree
-     * @return the visitor result
-     */
-    T visitNameparams(Puzzle16Parser.NameparamsContext ctx);
-
-    /**
-     * Visit a parse tree produced by {@link Puzzle16Parser#code}.
-     *
-     * @param ctx the parse tree
-     * @return the visitor result
-     */
-    T visitCode(Puzzle16Parser.CodeContext ctx);
 
     /**
      * Visit a parse tree produced by {@link Puzzle16Parser#x}.

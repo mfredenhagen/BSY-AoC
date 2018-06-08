@@ -1,5 +1,4 @@
 // Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle16.g4 by ANTLR 4.7
-
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -8,7 +7,7 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
  * of the available methods.
  *
  * @param <T> The return type of the visit operation. Use {@link Void} for
- *            operations with no return type.
+ * operations with no return type.
  */
 public class Puzzle16BaseVisitor<T> extends AbstractParseTreeVisitor<T> implements Puzzle16Visitor<T> {
     /**
@@ -63,39 +62,6 @@ public class Puzzle16BaseVisitor<T> extends AbstractParseTreeVisitor<T> implemen
      */
     @Override
     public T visitPartner(Puzzle16Parser.PartnerContext ctx) {
-        return visitChildren(ctx);
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation returns the result of calling
-     * {@link #visitChildren} on {@code ctx}.</p>
-     */
-    @Override
-    public T visitIntparams(Puzzle16Parser.IntparamsContext ctx) {
-        return visitChildren(ctx);
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation returns the result of calling
-     * {@link #visitChildren} on {@code ctx}.</p>
-     */
-    @Override
-    public T visitNameparams(Puzzle16Parser.NameparamsContext ctx) {
-        return visitChildren(ctx);
-    }
-
-    /**
-     * {@inheritDoc}
-     *
-     * <p>The default implementation returns the result of calling
-     * {@link #visitChildren} on {@code ctx}.</p>
-     */
-    @Override
-    public T visitCode(Puzzle16Parser.CodeContext ctx) {
         return visitChildren(ctx);
     }
 

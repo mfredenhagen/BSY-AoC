@@ -7,22 +7,13 @@ move
     : spin | exchange | partner
     ;
 spin
-    : code INT
+    : 's' INT
     ;
 exchange
-    : code intparams
+    : 'x' x '/' y
     ;
 partner
-    : code nameparams
-    ;
-intparams
-    : x '/' y
-    ;
-nameparams
-    : a '/' b
-    ;
-code
-    : NAME
+    : 'p' a '/' b
     ;
 x
     : INT
@@ -31,14 +22,14 @@ y
     : INT
     ;
 a
-    : NAME
+    : (NAME | 'p')
     ;
 b
-    : NAME
+    : (NAME | 'p')
     ;
 
 NAME
-    : 'a'..'p' | 's' | 'x'
+    : 'a'..'o'
     ;
 INT
     : [0-9][0-5]?

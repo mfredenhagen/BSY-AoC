@@ -16,8 +16,7 @@ public class Puzzle16 {
     }
 
     protected static String solve(String input, String dancers) {
-        List<Move> moves = getMoves(input);
-        return dance(dancers, moves);
+        return dance(dancers, getMoves(input));
     }
 
     private static String dance(String dancers, List<Move> moves) {
@@ -42,13 +41,13 @@ public class Puzzle16 {
 
             @Override
             public Void visitExchange(Puzzle16Parser.ExchangeContext ctx) {
-                moves.add(new Exchange(Integer.parseInt(ctx.intparams().x().INT().getSymbol().getText()), Integer.parseInt(ctx.intparams().y().INT().getSymbol().getText())));
+                moves.add(new Exchange(Integer.parseInt(ctx.x().INT().getSymbol().getText()), Integer.parseInt(ctx.y().INT().getSymbol().getText())));
                 return super.visitExchange(ctx);
             }
 
             @Override
             public Void visitPartner(Puzzle16Parser.PartnerContext ctx) {
-                moves.add(new Partner(ctx.nameparams().a().NAME().getSymbol().getText(), ctx.nameparams().b().NAME().getSymbol().getText()));
+                moves.add(new Partner(ctx.a().getText(), ctx.b().getText()));
                 return super.visitPartner(ctx);
             }
         }.visit(parser.dancemoves());
@@ -64,6 +63,7 @@ public class Puzzle16 {
         List<String> pastLines = new ArrayList<>();
         pastLines.add(tmp);
         List<Move> moves = getMoves(input);
+        // Todo rewrite with Stream.iterate and takeWhile/limit (peek pastLines)
         for (int i = 0; i < iterations; i++) {
             tmp = dance(tmp, moves);
             // check for cycle
