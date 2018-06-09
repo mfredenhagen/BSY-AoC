@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle7.g4 by ANTLR 4.7
+// Generated from Puzzle7.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -12,7 +12,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 public class Puzzle7BaseListener implements Puzzle7Listener {
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -21,7 +21,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -30,7 +30,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -39,7 +39,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -48,7 +48,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -57,7 +57,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -66,7 +66,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -75,7 +75,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -84,7 +84,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -93,7 +93,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -102,7 +102,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -111,7 +111,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -120,7 +120,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -129,7 +129,7 @@ public class Puzzle7BaseListener implements Puzzle7Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override

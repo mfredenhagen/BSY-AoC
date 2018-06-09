@@ -1,5 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle8.g4 by ANTLR 4.7
-
+// Generated from Puzzle8.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -64,18 +63,18 @@ public interface Puzzle8Listener extends ParseTreeListener {
     void exitOp(Puzzle8Parser.OpContext ctx);
 
     /**
-     * Enter a parse tree produced by {@link Puzzle8Parser#value}.
+     * Enter a parse tree produced by {@link Puzzle8Parser#blocks}.
      *
      * @param ctx the parse tree
      */
-    void enterValue(Puzzle8Parser.ValueContext ctx);
+    void enterBlocks(Puzzle8Parser.BlocksContext ctx);
 
     /**
-     * Exit a parse tree produced by {@link Puzzle8Parser#value}.
+     * Exit a parse tree produced by {@link Puzzle8Parser#blocks}.
      *
      * @param ctx the parse tree
      */
-    void exitValue(Puzzle8Parser.ValueContext ctx);
+    void exitBlocks(Puzzle8Parser.BlocksContext ctx);
 
     /**
      * Enter a parse tree produced by {@link Puzzle8Parser#condition}.

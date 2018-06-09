@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle16.g4 by ANTLR 4.7
+// Generated from Puzzle16.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
@@ -6,6 +6,7 @@ import org.antlr.v4.runtime.atn.ATNDeserializer;
 import org.antlr.v4.runtime.atn.ParserATNSimulator;
 import org.antlr.v4.runtime.atn.PredictionContextCache;
 import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
@@ -54,7 +55,7 @@ public class Puzzle16Parser extends Parser {
     public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
     static {
-        RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION);
+        RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION);
     }
 
     static {
@@ -374,6 +375,16 @@ public class Puzzle16Parser extends Parser {
         }
 
         @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterDancemoves(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitDancemoves(this);
+        }
+
+        @Override
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof Puzzle16Visitor)
                 return ((Puzzle16Visitor<? extends T>) visitor).visitDancemoves(this);
@@ -404,6 +415,16 @@ public class Puzzle16Parser extends Parser {
         }
 
         @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterMove(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitMove(this);
+        }
+
+        @Override
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof Puzzle16Visitor) return ((Puzzle16Visitor<? extends T>) visitor).visitMove(this);
             else return visitor.visitChildren(this);
@@ -422,6 +443,16 @@ public class Puzzle16Parser extends Parser {
         @Override
         public int getRuleIndex() {
             return RULE_spin;
+        }
+
+        @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterSpin(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitSpin(this);
         }
 
         @Override
@@ -450,6 +481,16 @@ public class Puzzle16Parser extends Parser {
         }
 
         @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterExchange(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitExchange(this);
+        }
+
+        @Override
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof Puzzle16Visitor) return ((Puzzle16Visitor<? extends T>) visitor).visitExchange(this);
             else return visitor.visitChildren(this);
@@ -475,6 +516,16 @@ public class Puzzle16Parser extends Parser {
         }
 
         @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterPartner(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitPartner(this);
+        }
+
+        @Override
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof Puzzle16Visitor) return ((Puzzle16Visitor<? extends T>) visitor).visitPartner(this);
             else return visitor.visitChildren(this);
@@ -493,6 +544,16 @@ public class Puzzle16Parser extends Parser {
         @Override
         public int getRuleIndex() {
             return RULE_x;
+        }
+
+        @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterX(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitX(this);
         }
 
         @Override
@@ -517,6 +578,16 @@ public class Puzzle16Parser extends Parser {
         }
 
         @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterY(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitY(this);
+        }
+
+        @Override
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof Puzzle16Visitor) return ((Puzzle16Visitor<? extends T>) visitor).visitY(this);
             else return visitor.visitChildren(this);
@@ -538,6 +609,16 @@ public class Puzzle16Parser extends Parser {
         }
 
         @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterA(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitA(this);
+        }
+
+        @Override
         public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
             if (visitor instanceof Puzzle16Visitor) return ((Puzzle16Visitor<? extends T>) visitor).visitA(this);
             else return visitor.visitChildren(this);
@@ -556,6 +637,16 @@ public class Puzzle16Parser extends Parser {
         @Override
         public int getRuleIndex() {
             return RULE_b;
+        }
+
+        @Override
+        public void enterRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).enterB(this);
+        }
+
+        @Override
+        public void exitRule(ParseTreeListener listener) {
+            if (listener instanceof Puzzle16Listener) ((Puzzle16Listener) listener).exitB(this);
         }
 
         @Override

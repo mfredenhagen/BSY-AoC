@@ -22,7 +22,7 @@ y
     : INT
     ;
 a
-    : (NAME | 'p')
+    : (NAME | 'p') // because 'p' is ambigous between partner parameter and move identifier, we need it here to distinguish
     ;
 b
     : (NAME | 'p')

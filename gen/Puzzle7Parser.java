@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle7.g4 by ANTLR 4.7
+// Generated from Puzzle7.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
@@ -7,6 +7,7 @@ import org.antlr.v4.runtime.atn.ParserATNSimulator;
 import org.antlr.v4.runtime.atn.PredictionContextCache;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.List;
@@ -51,7 +52,7 @@ public class Puzzle7Parser extends Parser {
     public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
     static {
-        RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION);
+        RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION);
     }
 
     static {
@@ -299,6 +300,12 @@ public class Puzzle7Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle7Listener) ((Puzzle7Listener) listener).exitList(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle7Visitor) return ((Puzzle7Visitor<? extends T>) visitor).visitList(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class ProgContext extends ParserRuleContext {
@@ -332,6 +339,12 @@ public class Puzzle7Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle7Listener) ((Puzzle7Listener) listener).exitProg(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle7Visitor) return ((Puzzle7Visitor<? extends T>) visitor).visitProg(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class NameContext extends ParserRuleContext {
@@ -356,6 +369,12 @@ public class Puzzle7Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle7Listener) ((Puzzle7Listener) listener).exitName(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle7Visitor) return ((Puzzle7Visitor<? extends T>) visitor).visitName(this);
+            else return visitor.visitChildren(this);
         }
     }
 
@@ -386,6 +405,12 @@ public class Puzzle7Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle7Listener) ((Puzzle7Listener) listener).exitDisc(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle7Visitor) return ((Puzzle7Visitor<? extends T>) visitor).visitDisc(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class WeightContext extends ParserRuleContext {
@@ -410,6 +435,12 @@ public class Puzzle7Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle7Listener) ((Puzzle7Listener) listener).exitWeight(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle7Visitor) return ((Puzzle7Visitor<? extends T>) visitor).visitWeight(this);
+            else return visitor.visitChildren(this);
         }
     }
 }

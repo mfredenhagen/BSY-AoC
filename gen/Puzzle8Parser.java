@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle8.g4 by ANTLR 4.7
+// Generated from Puzzle8.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
@@ -7,6 +7,7 @@ import org.antlr.v4.runtime.atn.ParserATNSimulator;
 import org.antlr.v4.runtime.atn.PredictionContextCache;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.List;
@@ -17,10 +18,10 @@ public class Puzzle8Parser extends Parser {
             T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, T__7 = 8, T__8 = 9,
             ID = 10, INT = 11, NEWLINE = 12, WS = 13, ANY = 14;
     public static final int
-            RULE_prog = 0, RULE_instr = 1, RULE_register = 2, RULE_op = 3, RULE_value = 4,
+            RULE_prog = 0, RULE_instr = 1, RULE_register = 2, RULE_op = 3, RULE_blocks = 4,
             RULE_condition = 5, RULE_comp = 6;
     public static final String[] ruleNames = {
-            "prog", "instr", "register", "op", "value", "condition", "comp"
+            "prog", "instr", "register", "op", "blocks", "condition", "comp"
     };
     /**
      * @deprecated Use {@link #VOCABULARY} instead.
@@ -56,7 +57,7 @@ public class Puzzle8Parser extends Parser {
     public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
     static {
-        RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION);
+        RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION);
     }
 
     static {
@@ -179,7 +180,7 @@ public class Puzzle8Parser extends Parser {
                 setState(28);
                 op();
                 setState(29);
-                value();
+                blocks();
                 setState(30);
                 condition();
             }
@@ -239,9 +240,9 @@ public class Puzzle8Parser extends Parser {
         return _localctx;
     }
 
-    public final ValueContext value() throws RecognitionException {
-        ValueContext _localctx = new ValueContext(_ctx, getState());
-        enterRule(_localctx, 8, RULE_value);
+    public final BlocksContext blocks() throws RecognitionException {
+        BlocksContext _localctx = new BlocksContext(_ctx, getState());
+        enterRule(_localctx, 8, RULE_blocks);
         try {
             enterOuterAlt(_localctx, 1);
             {
@@ -271,7 +272,7 @@ public class Puzzle8Parser extends Parser {
                 setState(40);
                 comp();
                 setState(41);
-                value();
+                blocks();
             }
         } catch (RecognitionException re) {
             _localctx.exception = re;
@@ -349,6 +350,12 @@ public class Puzzle8Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitProg(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitProg(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class InstrContext extends ParserRuleContext {
@@ -364,8 +371,8 @@ public class Puzzle8Parser extends Parser {
             return getRuleContext(OpContext.class, 0);
         }
 
-        public ValueContext value() {
-            return getRuleContext(ValueContext.class, 0);
+        public BlocksContext blocks() {
+            return getRuleContext(BlocksContext.class, 0);
         }
 
         public ConditionContext condition() {
@@ -385,6 +392,12 @@ public class Puzzle8Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitInstr(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitInstr(this);
+            else return visitor.visitChildren(this);
         }
     }
 
@@ -411,6 +424,12 @@ public class Puzzle8Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitRegister(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitRegister(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class OpContext extends ParserRuleContext {
@@ -432,10 +451,16 @@ public class Puzzle8Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitOp(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitOp(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
-    public static class ValueContext extends ParserRuleContext {
-        public ValueContext(ParserRuleContext parent, int invokingState) {
+    public static class BlocksContext extends ParserRuleContext {
+        public BlocksContext(ParserRuleContext parent, int invokingState) {
             super(parent, invokingState);
         }
 
@@ -445,17 +470,23 @@ public class Puzzle8Parser extends Parser {
 
         @Override
         public int getRuleIndex() {
-            return RULE_value;
+            return RULE_blocks;
         }
 
         @Override
         public void enterRule(ParseTreeListener listener) {
-            if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).enterValue(this);
+            if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).enterBlocks(this);
         }
 
         @Override
         public void exitRule(ParseTreeListener listener) {
-            if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitValue(this);
+            if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitBlocks(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitBlocks(this);
+            else return visitor.visitChildren(this);
         }
     }
 
@@ -472,8 +503,8 @@ public class Puzzle8Parser extends Parser {
             return getRuleContext(CompContext.class, 0);
         }
 
-        public ValueContext value() {
-            return getRuleContext(ValueContext.class, 0);
+        public BlocksContext blocks() {
+            return getRuleContext(BlocksContext.class, 0);
         }
 
         @Override
@@ -489,6 +520,12 @@ public class Puzzle8Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitCondition(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitCondition(this);
+            else return visitor.visitChildren(this);
         }
     }
 
@@ -510,6 +547,12 @@ public class Puzzle8Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle8Listener) ((Puzzle8Listener) listener).exitComp(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle8Visitor) return ((Puzzle8Visitor<? extends T>) visitor).visitComp(this);
+            else return visitor.visitChildren(this);
         }
     }
 }

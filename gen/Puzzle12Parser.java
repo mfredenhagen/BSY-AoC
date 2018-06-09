@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle12.g4 by ANTLR 4.7
+// Generated from Puzzle12.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
@@ -7,6 +7,7 @@ import org.antlr.v4.runtime.atn.ParserATNSimulator;
 import org.antlr.v4.runtime.atn.PredictionContextCache;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.List;
@@ -49,7 +50,7 @@ public class Puzzle12Parser extends Parser {
     public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
     static {
-        RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION);
+        RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION);
     }
 
     static {
@@ -263,6 +264,12 @@ public class Puzzle12Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle12Listener) ((Puzzle12Listener) listener).exitList(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle12Visitor) return ((Puzzle12Visitor<? extends T>) visitor).visitList(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class ProgContext extends ParserRuleContext {
@@ -292,6 +299,12 @@ public class Puzzle12Parser extends Parser {
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle12Listener) ((Puzzle12Listener) listener).exitProg(this);
         }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle12Visitor) return ((Puzzle12Visitor<? extends T>) visitor).visitProg(this);
+            else return visitor.visitChildren(this);
+        }
     }
 
     public static class NameContext extends ParserRuleContext {
@@ -316,6 +329,12 @@ public class Puzzle12Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle12Listener) ((Puzzle12Listener) listener).exitName(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle12Visitor) return ((Puzzle12Visitor<? extends T>) visitor).visitName(this);
+            else return visitor.visitChildren(this);
         }
     }
 
@@ -345,6 +364,12 @@ public class Puzzle12Parser extends Parser {
         @Override
         public void exitRule(ParseTreeListener listener) {
             if (listener instanceof Puzzle12Listener) ((Puzzle12Listener) listener).exitPipes(this);
+        }
+
+        @Override
+        public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+            if (visitor instanceof Puzzle12Visitor) return ((Puzzle12Visitor<? extends T>) visitor).visitPipes(this);
+            else return visitor.visitChildren(this);
         }
     }
 }

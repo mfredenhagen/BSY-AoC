@@ -33,7 +33,7 @@ public class Puzzle8 {
 
     private static Instruction buildInstr(Puzzle8Parser.InstrContext instr, Puzzle8Parser parser) {
         String register = instr.register().ID().getSymbol().getText();
-        int value = Integer.parseInt(instr.value().INT().getSymbol().getText());
+        int value = Integer.parseInt(instr.blocks().INT().getSymbol().getText());
         Op op = Op.valueOf(instr.op().getText().toUpperCase());
         Cond cond = buildCond(instr.condition());
         return new Instruction(register, op, value, cond);
@@ -41,7 +41,7 @@ public class Puzzle8 {
 
     private static Cond buildCond(Puzzle8Parser.ConditionContext condition) {
         String register = condition.register().ID().getSymbol().getText();
-        int value = Integer.parseInt(condition.value().INT().getSymbol().getText());
+        int value = Integer.parseInt(condition.blocks().INT().getSymbol().getText());
         Comp comp = Comp.SYMBOLS.get(condition.comp().getText());
         return new Cond(register, comp, value);
     }
@@ -107,7 +107,7 @@ public class Puzzle8 {
         abstract boolean apply(int read, int value);
     }
 
-    protected static class Result {
+    static class Result {
         final int LargestValue;
         final int HighestValueDuringComputation;
 

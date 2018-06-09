@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle8.g4 by ANTLR 4.7
+// Generated from Puzzle8.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -12,7 +12,7 @@ import org.antlr.v4.runtime.tree.TerminalNode;
 public class Puzzle8BaseListener implements Puzzle8Listener {
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -21,7 +21,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -30,7 +30,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -39,7 +39,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -48,7 +48,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -57,7 +57,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -66,7 +66,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -75,7 +75,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -84,25 +84,25 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
-    public void enterValue(Puzzle8Parser.ValueContext ctx) {
+    public void enterBlocks(Puzzle8Parser.BlocksContext ctx) {
     }
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
-    public void exitValue(Puzzle8Parser.ValueContext ctx) {
+    public void exitBlocks(Puzzle8Parser.BlocksContext ctx) {
     }
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -111,7 +111,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -120,7 +120,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -129,7 +129,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -138,7 +138,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -147,7 +147,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -156,7 +156,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override
@@ -165,7 +165,7 @@ public class Puzzle8BaseListener implements Puzzle8Listener {
 
     /**
      * {@inheritDoc}
-     * <p>
+     *
      * <p>The default implementation does nothing.</p>
      */
     @Override

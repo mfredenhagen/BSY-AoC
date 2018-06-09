@@ -1,4 +1,4 @@
-// Generated from /Users/mario/IdeaProjects/AdventOfCode/src/Puzzle7.g4 by ANTLR 4.7
+// Generated from Puzzle7.g4 by ANTLR 4.7.1
 
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
@@ -56,7 +56,7 @@ public class Puzzle7Lexer extends Lexer {
     };
 
     static {
-        RuntimeMetaData.checkVersion("4.7", RuntimeMetaData.VERSION);
+        RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION);
     }
 
     static {
