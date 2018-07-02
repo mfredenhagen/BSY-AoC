@@ -81,7 +81,7 @@ public class Puzzle16 {
     private static abstract class Move {
         abstract String apply(String dancers);
 
-        String swap(String dancers, int x, int y) {
+        protected String swap(String dancers, int x, int y) {
             char[] chars = dancers.toCharArray();
             char _x = chars[x];
             chars[x] = chars[y];

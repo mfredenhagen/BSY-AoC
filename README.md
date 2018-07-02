@@ -9,5 +9,5 @@ How to use: `./gradlew build`
 Aufgaben sind als Test mit Ausgabe des Ergebnis auf der Console implementiert. 
 
 Derzeitiger Stand: 
-* Tag 1-16 gelöst und hier eingecheckt, 
-* 17-25 Todo ;-\) 
+* Tag 1-17 gelöst und hier eingecheckt, 
+* 18-25 Todo ;-\) 
