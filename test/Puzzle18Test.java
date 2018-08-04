@@ -79,6 +79,7 @@ class Puzzle18Test {
     void spike() {
         long result = Puzzle18.solve(INPUT);
         System.out.println("Puzzle18: " + result);
+        assertEquals(4601, result);
     }
 
     @Test
@@ -90,5 +91,6 @@ class Puzzle18Test {
     void spikeA() {
         int result = Puzzle18.solveA(INPUT);
         System.out.println("Puzzle18 a: " + result);
+        assertEquals(6858, result);
     }
 }
